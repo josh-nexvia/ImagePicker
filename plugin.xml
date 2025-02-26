@@ -81,8 +81,10 @@
         <resource-file src="src/ios/GMImagePicker/es.lproj" />
         <resource-file src="src/ios/GMImagePicker/fr.lproj" />
         <resource-file src="src/ios/GMImagePicker/it.lproj" />
-        <resource-file src="src/ios/GMImagePicker/pt.lproj" />
+        <resource-file src="src/ios/GMImagePicker/ja.lproj" />
+        <resource-file src="src/ios/GMImagePicker/ko.lproj" />
         <resource-file src="src/ios/GMImagePicker/pl.lproj" />
+        <resource-file src="src/ios/GMImagePicker/pt.lproj" />
         <resource-file src="src/ios/GMImagePicker/zh-Hans.lproj" />
 
         <framework src="Accelerate.framework" />
@@ -102,22 +104,14 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:label="@string/multi_app_name" android:name="com.synconset.MultiImageChooserActivity" android:theme="@style/Theme.AppCompat.Light">
-            </activity>
-        </config-file>
-
-        <config-file target="AndroidManifest.xml" parent="/manifest">
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <activity android:label="@string/multi_app_name" android:name="com.synconset.MultiImageChooserActivity" android:theme="@style/TransparentTheme" />
         </config-file>
 
         <preference name="ANDROID_SUPPORT_V7_VERSION" default="27.+"/>
         <framework src="com.android.support:appcompat-v7:$ANDROID_SUPPORT_V7_VERSION" />
 
         <source-file src="src/android/com/synconset/ImagePicker/ImagePicker.java" target-dir="src/com/synconset" />
-        <source-file src="src/android/com/synconset/ImagePicker/FakeR.java" target-dir="src/com/synconset" />
         <source-file src="src/android/com/synconset/ImagePicker/ResultIPC.java" target-dir="src/com/synconset" />
-
-        <source-file src="src/android/Library/src/ImageFetcher.java" target-dir="src/com/synconset"/>
         <source-file src="src/android/Library/src/MultiImageChooserActivity.java" target-dir="src/com/synconset"/>
 
         <resource-file src="src/android/Library/res/anim/image_pop_in.xml" target="res/anim/image_pop_in.xml"/>
@@ -139,7 +133,7 @@
         <resource-file src="src/android/Library/res/layout/actionbar_done_button.xml" target="res/layout/actionbar_done_button.xml"/>
         <resource-file src="src/android/Library/res/layout/multiselectorgrid.xml" target="res/layout/multiselectorgrid.xml"/>
         <resource-file src="src/android/Library/res/values/multiimagechooser_strings_en.xml" target="res/values/multiimagechooser_strings_en.xml"/>
-
+        <resource-file src="src/android/Library/res/values/multiimageThemes.xml" target="res/values/multiimageThemes.xml"/>
         <resource-file src="src/android/Library/res/values-de/multiimagechooser_strings_de.xml" target="res/values-de/multiimagechooser_strings_de.xml"/>
         <resource-file src="src/android/Library/res/values-es/multiimagechooser_strings_es.xml" target="res/values-es/multiimagechooser_strings_es.xml"/>
         <resource-file src="src/android/Library/res/values-fr/multiimagechooser_strings_fr.xml" target="res/values-fr/multiimagechooser_strings_fr.xml"/>
