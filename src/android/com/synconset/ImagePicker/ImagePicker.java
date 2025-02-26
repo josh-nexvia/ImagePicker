@@ -72,7 +72,7 @@ public class ImagePicker extends CordovaPlugin {
                     // callbackContext.success();
                 } else {
                     callbackContext
-                            .error("저장소 접근이 제한되었습니다. [설정 > 앱 > " + getApplicationName() + "]에서 저장소 접근 권한을 허용해 주세요.");
+                            .error("Storage access is restricted. [Settings > Apps > " + getApplicationName() + " Please allow storage access in app Settings].");
                 }
             }
             return true;
@@ -164,7 +164,7 @@ public class ImagePicker extends CordovaPlugin {
             callbackContext.success(res);
 
         } else {
-            callbackContext.error("이미지가 선택되지 않았습니다.");
+            callbackContext.error("No image has been selected.");
         }
     }
 
@@ -190,7 +190,7 @@ public class ImagePicker extends CordovaPlugin {
             cordova.startActivityForResult(this, imagePickerIntent, 0);
         } else {
             // Tell the JS layer that something went wrong...
-            callbackContext.error("저장소 접근이 제한되었습니다. [설정 > 앱 > " + getApplicationName() + "]에서 저장소 접근 권한을 허용해 주세요");
+            callbackContext.error("Storage access is restricted. [Settings > Apps > " + getApplicationName() + " Please allow storage access in app settings]");
         }
     }
 

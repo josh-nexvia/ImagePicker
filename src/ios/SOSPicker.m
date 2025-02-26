@@ -113,17 +113,17 @@ typedef enum : NSUInteger {
 
 - (void) handleAuthorizationRequestDenied:(PHAuthorizationStatus) status command: (CDVInvokedUrlCommand *)command {
     if (status == PHAuthorizationStatusDenied) {
-        NSString* message = @"앨범 접근이 거부되었습니다. [설정 > 짐싸 > 사진]에서 접근 권한을 허용해 주세요";
+        NSString* message = @"Album access denied. Please allow access in [Settings > Baggage > Photos]";
         
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:message];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     } else if (status == PHAuthorizationStatusRestricted) {
-        NSString* message = @"앨범 접근이 제한되었습니다. [설정 > 개인 정보 보호 > 사진]에서 접근 권한을 허용해 주세요";
+        NSString* message = @"Album access is restricted. Please allow access in [Settings > Privacy > Photos]";
         
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:message];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     } else {
-        NSString* message = @"앨범 접근 권한을 허용해 주세요";
+        NSString* message = @"Please allow album access";
         
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:message];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
